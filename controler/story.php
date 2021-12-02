@@ -1,5 +1,5 @@
 <?php
-    class story {
+    class Story {
         private $idStory;
         private $releaseDate;
         private $description;

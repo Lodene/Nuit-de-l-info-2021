@@ -1,5 +1,5 @@
 <?php
-    class admin {
+    class Admin {
         private $idAdmin;
         private $login;
         private $password;

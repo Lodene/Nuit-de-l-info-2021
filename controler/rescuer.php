@@ -4,15 +4,15 @@
         private $firstName;
         private $lastName;
         private $birthDay;
-        private $placeOfDay;
+        private $sources;
         private $age;
 
-        public function __construct($idRescuer = NULL, $firstName = '', $lastName = '', $birthDay = '', $placeOfDay = '', $age = '') {
+        public function __construct($idRescuer = NULL, $firstName = '', $lastName = '', $birthDay = '', $sources = '', $age = '') {
             $this->idRescuer = NULL;
             $this->firstName = $firstName;
             $this->lastName = $lastName;
             $this->birthDay = $birthDay;
-            $this->placeOfDay = $placeOfDay;
+            $this->sources = $sources;
             $this->age = $age;
         }
 
@@ -35,8 +35,8 @@
             $this->birthDay = $birthDay;
         }
 
-        public function setPlaceOfDay($placeOfDay){
-            $this->placeOfDay = $placeOfDay;
+        public function setsources($sources){
+            $this->sources = $sources;
         }
 
         public function setAge($age){
@@ -64,8 +64,8 @@
             return $this->birthDay;
         }
 
-        public function getPlaceOfDay(){
-            return $this->placeOfDay;
+        public function getsources(){
+            return $this->sources;
         }
 
         public function getAge(){
