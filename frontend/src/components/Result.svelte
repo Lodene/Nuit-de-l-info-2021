@@ -9,8 +9,8 @@
     </div>
     
     <div class="details">
-        <h3>{result.title}</h3>
-        <p>{result.resume}</p>
+        <h3>{result.firstName} {result.lastName}</h3>
+        <p>{result.age}</p>
     </div>
 </div>
 
