@@ -14,7 +14,7 @@
     $: {
         dispatch('updateSearch', searchValue);
         postParams.append("research", searchValue);
-        fetch(url + 'dunkerquerescuer/backend/controler/getResult.php', { method: 'POST', body: postParams })
+        fetch(url + 'dunkerquerescuer/backend/controler/getResultRescuer.php', { method: 'POST', body: postParams })
         .then(res => res.json())
         .then(data => {
             if(data.success == true){

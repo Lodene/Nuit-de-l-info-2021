@@ -6,13 +6,13 @@
 </script>
 
 <header>
-    <div class="logo"></div>
+    <div class="logo"><img src="../ressources/logo.png" alt=""></div>
 
     <SearchBar on:updateSearch/>
 
     <div class="buttons">
-        <div></div>
-        <div></div>
+        <div><img src="../ressources/iconsPlus.svg" alt="add"></div>
+        <div><img src="../ressources/iconsPerson.png" alt="person"></div>
     </div>
 
 </header>
@@ -27,19 +27,21 @@
         align-items: center;
     }
 
-    header > * {
-        border: 1px solid black;
-    }
 
     .logo {
-        width: 100px;
-        height: 100px;
-        
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .buttons {
-        width: 200px;
+        width: 250px;
         height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 </style>
 

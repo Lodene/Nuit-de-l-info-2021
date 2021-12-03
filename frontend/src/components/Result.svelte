@@ -1,10 +1,14 @@
 <script>
     import { fade } from "svelte/transition";
+    import { createEventDispatcher } from "svelte";
+
+    let dispatch = createEventDispatcher();
+
     export let result;
 </script>
 
 
-<div class="result" in:fade>
+<div class="result" in:fade on:click={() => {dispatch('updateSelection', result)}}>
     <div class="img-container">
         <img src="../ressources/default_picture.png" alt="resultPicture">
     </div>

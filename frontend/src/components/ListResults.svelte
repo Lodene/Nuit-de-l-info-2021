@@ -13,7 +13,7 @@
     <h2>Résultats pour {searchValue}</h2>
     <div class="display-results">
         {#each $ResultStore as result}
-            <Result {result}/>
+            <Result {result} on:updateSelection/>
         {/each}
     </div>
 </div>
@@ -22,7 +22,7 @@
 <style>
     .result-list {
         margin: 0 auto;
-        width: 1000px;
+        width: 600px;
     }
     
     .display-results {
