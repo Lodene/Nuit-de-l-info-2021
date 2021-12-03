@@ -1,5 +1,7 @@
 <script>
+    import { fade } from "svelte/transition";
     import ResultStore from "../stores/ResultStore";
+    import Result from "./Result.svelte";
 
     export let searchValue;
 
@@ -7,13 +9,11 @@
 </script>
 
 
-<div class="result-list">
+<div class="result-list" in:fade>
     <h2>Résultats pour {searchValue}</h2>
     <div class="display-results">
         {#each $ResultStore as result}
-            <div class="result">
-                <img src="" alt="">
-            </div>
+            <Result {result}/>
         {/each}
     </div>
 </div>
@@ -27,6 +27,7 @@
     
     .display-results {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 </style>

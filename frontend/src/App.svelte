@@ -1,7 +1,9 @@
 <script>
 	import Header from "./components/Header.svelte";
 	import Footer from "./components/Footer.svelte";
-import ListResults from "./components/ListResults.svelte";
+	import ListResults from "./components/ListResults.svelte";
+	import Home from "./components/Home.svelte";
+	
 
 	let searchValue;
 	
@@ -14,7 +16,11 @@ import ListResults from "./components/ListResults.svelte";
 
 <main>
 	<Header on:updateSearch={updateSearch}/>
-	<ListResults {searchValue}/>
+	{#if searchValue != null && searchValue != ''}
+		<ListResults {searchValue}/>
+	{:else}
+		<Home/>
+	{/if}
 	<Footer/>
 </main>
 
