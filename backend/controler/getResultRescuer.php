@@ -18,6 +18,7 @@
             $send['result'][$id]['birthDay'] = $object->getBirthDay();
             $send['result'][$id]['sources'] = $object->getSources();
             $send['result'][$id]['age'] = $object->getAge();
+            $send['result'][$id]['rescueNumber'] = $object->getRescueNumber();
             $id++;
         }
         $send['success'] = true;

@@ -1,7 +1,6 @@
 <?php
     class Story {
         private $idStory;
-        private $releaseDate;
         private $description;
         private $keyword;
         private $title;
@@ -9,10 +8,9 @@
         private $numberOfPeopleSave;
 
 
-        public function __construct($idStory = NULL, $releaseDate = '', $description = '', $keyword = '', $title = '', 
+        public function __construct($idStory = NULL, $description = '', $keyword = '', $title = '', 
             $storyDate = '', $numberOfPeopleSave = '') {
             $this->idStory = $idStory;
-            $this->releaseDate = $releaseDate;
             $this->description = $description;
             $this->keyword = $keyword;
             $this->title = $title;
@@ -26,10 +24,6 @@
 
         public function setId($idStory) {
             $this->idStory = $idStory;
-        }
-
-        public function setReleaseDate($releaseDate) {
-            $this->releaseDate = $releaseDate;
         }
 
         public function setDescription($description) {
@@ -58,12 +52,8 @@
             -------------- GET --------------
             --------------------------------- */
 
-        public function getIdStory() {
+        public function getId() {
             return $this->idStory;
-        }
-
-        public function getReleaseDate() {
-            return $this->releaseDate;
         }
 
         public function getDescription() {

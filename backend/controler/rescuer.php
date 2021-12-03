@@ -6,14 +6,17 @@
         private $birthDay;
         private $sources;
         private $age;
+        private $rescueNumber;
 
-        public function __construct($idRescuer = NULL, $firstName = '', $lastName = '', $birthDay = '', $sources = '', $age = '') {
+        public function __construct($idRescuer = NULL, $firstName = '', $lastName = '', $birthDay = '', $sources = '', $age = '', 
+            $rescueNumber = '') {
             $this->idRescuer = $idRescuer;
             $this->firstName = $firstName;
             $this->lastName = $lastName;
             $this->birthDay = $birthDay;
             $this->sources = $sources;
             $this->age = $age;
+            $this->rescueNumber = $rescueNumber;
         }
 
         /* ---------------------------------
@@ -42,7 +45,10 @@
         public function setAge($age){
             $this->age = $age;
         }
-
+        
+        public function setRescueNumber($rescueNumber){
+            $this->rescueNumber = $rescueNumber;
+        }
 
         /* ---------------------------------
            -------------- GET --------------
@@ -70,6 +76,10 @@
 
         public function getAge(){
             return $this->age;
-        }    
+        }   
+        
+        public function getRescueNumber(){
+            return $this->rescueNumber;
+        } 
     }
 ?>

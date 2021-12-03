@@ -15,7 +15,7 @@
             $results = $query->fetchAll();
             
             foreach($results as $story){
-                $newStory = new Story($story['idStory'], $rescuer['releaseDate'], $rescuer['description'], $rescuer['keyword'],
+                $newStory = new Story($story['idStory'], $rescuer['description'], $rescuer['keyword'],
                     $story['title'], $story['storyDate'], $story['numberOfPeopleSave']);
                 array_push($storyArray, $newStory);
             }
