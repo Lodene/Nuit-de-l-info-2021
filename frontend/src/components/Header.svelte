@@ -1,11 +1,14 @@
 <script>
     import SearchBar from "./SearchBar.svelte";
+    import { createEventDispatcher } from "svelte";
+
+    let dispatch = createEventDispatcher();
 </script>
 
 <header>
     <div class="logo"></div>
 
-    <SearchBar/>
+    <SearchBar on:updateSearch/>
 
     <div class="buttons">
         <div></div>

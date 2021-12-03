@@ -1,8 +1,14 @@
 <script>
     import ResultStore from "../stores/ResultStore";
+    import { createEventDispatcher } from "svelte";
 
+    let dispatch = createEventDispatcher();
 
     let searchValue = '';
+
+    $: {
+        dispatch('updateSearch', searchValue);
+    }
 </script>
 
 
