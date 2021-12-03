@@ -6,7 +6,8 @@
 
     let searchValue = '';
     
-    const url = "http://localhost/";
+    //const url = "http://localhost/";
+    const url = "https://orp-ingenierie.fr/loc/";
     const postParams = new URLSearchParams();
     
 
