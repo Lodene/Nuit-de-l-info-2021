@@ -9,8 +9,8 @@ postParams.append("research", searchValue);
 fetch(url + 'dunkerquerescuer/backend/controler/getResult.php', { method: 'POST', body: postParams })
     .then(res => res.json())
     .then(data => {
-        if(data.articleAdded == true){
-            displayConfirmation();
+        if(data.success == true){
+            
         }
         else {
             displayError();
