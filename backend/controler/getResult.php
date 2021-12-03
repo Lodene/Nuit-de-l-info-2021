@@ -1,11 +1,14 @@
 <?php
+    require('../model/rescuerManager.php');
     header('Content-Type: application/json');
-    require('../model/rescuerManager');
+    
 
     $send['success'] = false;
     if(isset($_POST['research'])){
         $rescuerManager = new RescuerManager();
-        $send['result'] = $rescuerManager->researchRescuer($_POST['research']);
+        $objectArray = $rescuerManager->researchRescuer($_POST['research']);
+        $send['result'] = $objectArray;
+        
     }
     echo json_encode($send);
 ?>

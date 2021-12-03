@@ -8,7 +8,7 @@
         private $age;
 
         public function __construct($idRescuer = NULL, $firstName = '', $lastName = '', $birthDay = '', $sources = '', $age = '') {
-            $this->idRescuer = NULL;
+            $this->idRescuer = $idRescuer;
             $this->firstName = $firstName;
             $this->lastName = $lastName;
             $this->birthDay = $birthDay;
