@@ -10,6 +10,7 @@
         $send['result'] = array();
         foreach ($objectArray as $object){
             $id = $object->getId();
+            $send['result'][$id] = array();
             array_push($send['result'][$id], $object->getFirstName());
             array_push($send['result'][$id], $object->getLastName());
             array_push($send['result'][$id], $object->getBirthDay());
