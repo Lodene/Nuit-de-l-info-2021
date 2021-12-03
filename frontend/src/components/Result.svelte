@@ -1,9 +1,10 @@
 <script>
+    import { fade } from "svelte/transition";
     export let result;
 </script>
 
 
-<div class="result">
+<div class="result" in:fade>
     <div class="img-container">
         <img src="../ressources/default_picture.png" alt="resultPicture">
     </div>

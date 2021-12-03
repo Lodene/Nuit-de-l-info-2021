@@ -5,10 +5,31 @@
     let dispatch = createEventDispatcher();
 
     let searchValue = '';
+    
+    const url = "http://localhost/";
+    const postParams = new URLSearchParams();
+    
+
 
     $: {
         dispatch('updateSearch', searchValue);
+        postParams.append("research", searchValue);
+        fetch(url + 'dunkerquerescuer/backend/controler/getResult.php', { method: 'POST', body: postParams })
+        .then(res => res.json())
+        .then(data => {
+            if(data.success == true){
+                console.log(data.result[0]);
+                ResultStore.update(currentData => {
+                    return data.result;
+                });
+            }
+            else {
+                displayError();
+            }
+        });
     }
+
+    
 </script>
 
 
