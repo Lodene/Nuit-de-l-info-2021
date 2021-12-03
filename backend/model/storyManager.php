@@ -9,7 +9,7 @@
         }
 
         public function researchStory($research){
-            $query = $this->manager->query('SELECT * FROM story WHERE MATCH(firstName, lastName) AGAINST (:research)',  array(':research' => $research));
+            $query = $this->manager->query('SELECT * FROM story WHERE MATCH(keyword, title) AGAINST (:research);',  array(':research' => $research));
 
             $storyArray = array();
             $results = $query->fetchAll();
