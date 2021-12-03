@@ -6,15 +6,18 @@
         private $keyword;
         private $title;
         private $storyDate;
+        private $numberOfPeopleSave;
 
 
-        public function __construct($idStory = NULL, $releaseDate = '', $description = '', $keyword = '', $title = '', $storyDate = '') {
+        public function __construct($idStory = NULL, $releaseDate = '', $description = '', $keyword = '', $title = '', 
+            $storyDate = '', $numberOfPeopleSave = '') {
             $this->idStory = $idStory;
             $this->releaseDate = $releaseDate;
             $this->description = $description;
             $this->keyword = $keyword;
             $this->title = $title;
             $this->storyDate = $storyDate;
+            $this->numberOfPeopleSave = $numberOfPeopleSave;
         }
 
         /*  ---------------------------------
@@ -45,6 +48,10 @@
             $this->storyDate = $storyDate;
         }
 
+        public function setNumberOfPeopleSave($numberOfPeopleSave) {
+            $this->numberOfPeopleSave = $numberOfPeopleSave;
+        }
+
 
 
         /* ---------------------------------
@@ -70,9 +77,13 @@
         public function getTitle() {
             return $this->title;
         }
-
+        
         public function getStoryDate() {
             return $this->storyDate;
+        }
+
+        public function getNumberOfPeopleSave() {
+            return $this->numberOfPeopleSave;
         }
     }
 ?>
