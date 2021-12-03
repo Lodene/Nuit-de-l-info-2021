@@ -11,12 +11,12 @@
         $id = 0;
         foreach ($objectArray as $object){
             $send['result'][$id] = array();
-            array_push($send['result'][$id], $object->getId());
-            array_push($send['result'][$id], $object->getFirstName());
-            array_push($send['result'][$id], $object->getLastName());
-            array_push($send['result'][$id], $object->getBirthDay());
-            array_push($send['result'][$id], $object->getSources());
-            array_push($send['result'][$id], $object->getAge());
+            $send['result'][$id]['id'] = $object->getId();
+            $send['result'][$id]['firstName'] = $object->getFirstName();
+            $send['result'][$id]['lastName'] = $object->getLastName();
+            $send['result'][$id]['birthDay'] = $object->getBirthDay();
+            $send['result'][$id]['sources'] = $object->getSources();
+            $send['result'][$id]['age'] = $object->getAge();
             $id++;
         }
         $send['success'] = true;
